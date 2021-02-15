@@ -1,4 +1,1 @@
-cat << "EOF"
-
-    HELLO
-EOF
+figlet COOKIE-STEALER | lolcat 
