@@ -6,6 +6,7 @@ A simple bash scripting tool for stealing cookie in browser
 - git clone https://github.com/krishpranav/cookie-stealer
 - cd cookie-stealer
 - chmod +x *
+- bash install.sh
 - bash cookie-steal.sh
 
 # Note This Tool Has Been Created Only For Termux!!!!
