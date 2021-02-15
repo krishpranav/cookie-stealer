@@ -1,0 +1,4 @@
+cat << "EOF"
+
+    HELLO
+EOF
